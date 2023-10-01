@@ -19,7 +19,7 @@ function Navbar() {
             <a href="#" className='hover:text-purple-600'>Contact</a>
         </div>
         <Bars3Icon className={`w-10 h-10 text-purple-800 md:hidden ${isOpen ? "hidden" : ""}`} onClick={handleNavOpen}/>
-        <div className={`${isOpen ? "" : "hidden"} md:hidden  p-3 bg-purple-900 rounded-md relative`} >
+        <div className={`${isOpen ? "" : "hidden"} md:hidden sticky p-3 bg-purple-900 rounded-md`} >
             <button>
                 <XMarkIcon className='w-8 h-8 absolute right-2 top-2' onClick={handleNavClose}/>
             </button>
