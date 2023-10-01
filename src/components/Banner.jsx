@@ -2,9 +2,9 @@ import React from 'react'
 
 function Banner() {
   return (
-    <section className='flex w-full h-full items-center'>
-        <div className='flex flex-col gap-y-8 flex-1 items-center'>
-          <div className='flex flex-col gap-y-8'>
+    <section className='flex w-full h-full items-center p-5'>
+        <div className='flex flex-col gap-y-8 flex-1'>
+          <div className='flex flex-col gap-y-8 uppercase'>
             <h1 className="text-2xl font-bold">Hello</h1>
             <h2 className='text-4xl font-bold'>I'm Maryam Mohebbi</h2>
             <h3 className='text-xl font-bold'>Junior front-end developer</h3>
