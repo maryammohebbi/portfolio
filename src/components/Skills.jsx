@@ -2,8 +2,8 @@ import React from 'react'
 
 function Skills() {
   return (
-    <div className='mb-8'>
-      <h1 className='uppercase font-bold text-xl md:text-3xl mb-8 text-center'>My Skills</h1>
+    <div className='mb-20'>
+      <h1 className='uppercase font-bold text-xl md:text-3xl mb-12 text-center'>My Skills</h1>
       <div className='flex flex-wrap gap-4 items-center justify-center'>
 
         <div className='w-52 h-52 border border-purple-700 p-5 flex flex-col items-center justify-center rounded-lg bg-purple-100 hover:bg-purple-50 hover:shadow-2xl transition-all duration-500 ease-out'>
