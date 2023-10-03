@@ -2,7 +2,7 @@ import React from 'react'
 
 function Banner() {
   return (
-    <section className='flex w-full h-full items-center p-5 mb-8'>
+    <section className='container flex w-full items-center p-5 mb-8'>
         <div className="flex flex-col gap-y-8 flex-1 bg-[url('../src/assets/circuit.png')]">
           <div className='flex flex-col gap-y-8 uppercase'>
             <h1 className="text-2xl font-bold lg:text-4xl">Hello</h1>
