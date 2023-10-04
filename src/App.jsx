@@ -6,19 +6,23 @@ import Footer from './components/Footer'
 import Navbar from './components/Navbar'
 import Portfolio from './components/Portfolio'
 import Skills from './components/Skills'
+import { portfolios, posts } from './data/data'
 
 function App() {
 
   return (
-    <div className='flex flex-col items-center max-w-sm sm:max-w-lg md:max-w-2xl lg:max-w-full py-5 px-10 relative'>
-      <Navbar/>
-      <Banner/>
-      <About/>
-      <Skills/>
-      <Portfolio/>
-      <Blog/>
-      <Contact/>
-      <Footer/>
+  
+    <div className='relative'>
+      <section className='flex flex-col items-center max-w-sm sm:max-w-md md:max-w-lg lg:max-w-screen-xl mx-auto py-5 px-10'>
+        <Navbar/>
+        <Banner/>
+        <About/>
+        <Skills/>
+        <Portfolio portfolios={portfolios}/>
+        <Blog posts={posts}/>
+        <Contact/>
+        <Footer/>
+      </section>
     </div>
   )
 }

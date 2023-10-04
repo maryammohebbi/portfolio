@@ -1,25 +1,21 @@
-import React from 'react'
+import { CodeBracketIcon, EyeIcon } from '@heroicons/react/24/outline'
+import React, { useState } from 'react'
 
-function Portfolio() {
+function Portfolio({portfolios}) {
+
   return (
     <div className='container mb-20'>
-
       <h1 className='uppercase font-bold text-xl md:text-3xl mb-12 text-center'>Portfolio</h1>
-      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
-        <div class="bg-gray-100 p-4 h-72 rounded-lg">
-          <div>
-              <img src="" alt="" />
-          </div>
-          <div>
-              <a href="">Preview</a>
-              <a href="">Source Code</a>
-          </div>
-        </div>
-        <div class="bg-gray-100 p-4 h-72 rounded-lg">Column 2</div>
-        <div class="bg-gray-100 p-4 h-72 rounded-lg">Column 3</div>
-        <div class="bg-gray-200 p-4 h-72 rounded-lg">c-4</div>
-        <div class="bg-gray-200 p-4 h-72 rounded-lg">c-5</div>
-        <div class="bg-gray-200 p-4 h-72 rounded-lg">c-6</div>
+      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
+        {
+          portfolios.map(item => (
+            <PorfolioItem key={item.id} item={item}/>
+          ))
+        }
+        
+        
+
+
 
       </div>
 
@@ -28,3 +24,22 @@ function Portfolio() {
 }
 
 export default Portfolio
+
+function PorfolioItem ({item}){
+  const [isShow , setIsShow] = useState(false);
+  return(
+    <div 
+        onMouseEnter={()=>setIsShow(true)} 
+        onMouseLeave={()=>setIsShow(false)} 
+        className="bg-purple-50 h-96 rounded-lg relative shadow-xl  transition-all duration-500 ease-in">
+
+          <div className='w-full h-full rounded-lg'>
+              <img className='w-full h-full object-cover rounded-lg' src={item.imageUrl} alt="" />
+          </div>
+          <div className={` ${isShow ? "flex" : "hidden"} flex-col justify-around items-center absolute left-0 bottom-0 bg-purple-100/50 w-full h-full`}>
+              <a href="" className='font-bold text-lg lg:text-3xl text-black flex items-center gap-x-3 hover:text-slate-700'>Preview <EyeIcon className='w-10 h-10 font-bold text-red-800'/> </a>
+              <a href="" className='font-bold text-lg lg:text-3xl text-black flex items-center gap-x-3 hover:text-slate-700'>Source Code <CodeBracketIcon className='w-10 h-10 font-bold text-red-800'/> </a>
+          </div>
+        </div>
+  )
+}

@@ -2,7 +2,7 @@ import React from 'react'
 
 function About() {
   return (
-    <div className='container flex w-full'>
+    <div className='container flex w-full mb-12'>
         <div className='hidden lg:flex w-full'>
             <img src="../src/assets/about.jpg" alt="" />
         </div>

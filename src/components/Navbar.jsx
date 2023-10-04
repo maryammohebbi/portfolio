@@ -10,7 +10,7 @@ function Navbar() {
     }
 
   return (
-    <nav className='container w-full h-auto p-5 mb-3 sticky top-0'>
+    <nav className='container w-full h-auto p-5 mb-3 sticky top-0 bg-white z-10'>
         <ul className='hidden md:flex gap-x-7 text-purple-900 font-bold text-lg h-12'>
             <li className='w-16 hover:pl-2 transition-all duration-500 ease-in'><a href="#" className='hover:text-purple-600'>Home</a></li>
             <li className='w-16 hover:pl-2 transition-all duration-500 ease-in'><a href="#" className='hover:text-purple-600'>About</a></li>
