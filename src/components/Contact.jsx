@@ -3,7 +3,7 @@ import React from 'react'
 
 function Contact() {
   return (
-    <section className='container'>
+    <section className='container mb-8' id='contact'>
       <h1 className='uppercase font-bold text-xl md:text-3xl mb-12 text-center'>Contact me</h1>
 
       <div className='flex items-center'>

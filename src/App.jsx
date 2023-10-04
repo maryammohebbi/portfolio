@@ -6,7 +6,7 @@ import Footer from './components/Footer'
 import Navbar from './components/Navbar'
 import Portfolio from './components/Portfolio'
 import Skills from './components/Skills'
-import { portfolios, posts } from './data/data'
+import { portfolios, posts, skills } from './data/data'
 
 function App() {
 
@@ -17,7 +17,7 @@ function App() {
         <Navbar/>
         <Banner/>
         <About/>
-        <Skills/>
+        <Skills skills={skills}/>
         <Portfolio portfolios={portfolios}/>
         <Blog posts={posts}/>
         <Contact/>
